@@ -16,7 +16,7 @@ const OrdersDetail = ({product}) => {
 
 
 
-    const [cart, setCart] = useState(event);
+    const [cart, setCart] = useState(product);
 
     const onSubmit = cart => {
         const eventData = {
