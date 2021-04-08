@@ -10,8 +10,9 @@ import {
   } from "react-router-dom";
 import { UserContext } from '../../App';
 
-const OrdersDetail = ({event}) => {
+const OrdersDetail = ({product}) => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const {name, price, orderTime, imageURL} = product;
 
 
 
@@ -19,10 +20,10 @@ const OrdersDetail = ({event}) => {
 
     const onSubmit = cart => {
         const eventData = {
-          name: event.name,
-          price: event.price,
+          name: name,
+          price: price,
           email: loggedInUser.email,
-          imageURL: event.imageURL
+          imageURL: imageURL
         };
 
         fetch(`https://rhubarb-sundae-92097.herokuapp.com/deleteOldOrder`, {
@@ -48,21 +49,12 @@ const OrdersDetail = ({event}) => {
         // alert('product added successfully');
       };
 
-
-    const deleteEvent = id => {
-        const newProduct = {
-            name:event.name,
-            price:event.price
-        }
-        setCart(newProduct);
-
-    }
     return (
             <tr className="bg-primary">
-            <td>{event.name}</td>
+            <td>{name}</td>
             <td>1</td>
-            <td>${event.price}</td>
-            <td>{event.orderTime.slice(0,10)}</td>
+            <td>${price}</td>
+            <td>{orderTime.slice(0,10)}</td>
             </tr>
 
 

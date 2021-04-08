@@ -13,7 +13,7 @@ const AddProduct = () => {
       price: data.price,
       imageURL: imageURL
     };
-    const url = `https://rhubarb-sundae-92097.herokuapp.com/addEvent`;
+    const url = `https://rhubarb-sundae-92097.herokuapp.com/addProduct`;
     
     fetch(url, {
       method: 'POST', 

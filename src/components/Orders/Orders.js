@@ -1,22 +1,20 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../App';
-import Event from '../Product/Product';
 import OrdersDetail from './OrdersDetail';
 
 
 const Orders = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
-    const [events, setEvents] = useState([]);
+    const [products, setProducts] = useState([]);
     const email = loggedInUser.email;
-    let emaill = 'anikzaman67@gmail.com';
 
 
     useEffect(() => {
         fetch(`https://rhubarb-sundae-92097.herokuapp.com/orders/${email}`)
         .then(res => res.json())
         .then(data => {
-            setEvents(data)})
+            setProducts(data)})
     }, [])
 
     return (
@@ -30,7 +28,7 @@ const Orders = () => {
             </tr>
             <hr/>
             {
-                events.map(event =><OrdersDetail event={event}></OrdersDetail>)
+                products.map(product =><OrdersDetail product={product}></OrdersDetail>)
             }
             </table>
 

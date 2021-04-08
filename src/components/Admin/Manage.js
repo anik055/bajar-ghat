@@ -8,7 +8,7 @@ const Manage = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://rhubarb-sundae-92097.herokuapp.com/events')
+        fetch('https://rhubarb-sundae-92097.herokuapp.com/products')
         .then(res => res.json())
         .then(data => setProducts(data))
     }, [])
