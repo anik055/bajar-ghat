@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <div className="header bg-dark text-primary" >
             <div class="headNav d-flex bd-highlight bg-dark">
-            <div class="p-2 deco flex-grow-1 bd-highlight"><Link className="text-white text-decoration-none" to="/shop">Bajar Shodai</Link></div>
+            <div class="p-2 deco flex-grow-1 bd-highlight"><Link className="text-white text-decoration-none" to="/home">Bajar Shodai</Link></div>
             <div class="p-2 bd-highlight"><Link className="text-white text-decoration-none" to="/home">Home</Link></div>
             <div class="p-2 bd-highlight"><Link className="text-white text-decoration-none" to="/orders">Orders</Link></div>
             
