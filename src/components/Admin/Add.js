@@ -10,10 +10,10 @@ const AddProduct = () => {
   const onSubmit = data => {
     const eventData = {
       name: data.name,
+      price: data.price,
       imageURL: imageURL
     };
-    const url = `https://serene-island-10470.herokuapp.com/addEvent`;
-    console.log(eventData)
+    const url = `https://rhubarb-sundae-92097.herokuapp.com/addEvent`;
     
     fetch(url, {
       method: 'POST', 
@@ -24,10 +24,11 @@ const AddProduct = () => {
     })
     .then(res => res.json())
     .then(data => console.log(data) )
+    alert('product added successfully');
   };
 
   const handleImageUpload = event => {
-    console.log(event.target.files[0])
+
     const imageData = new FormData();
     imageData.set('key', '5a2f710cdc7bc8987fa156b3b0947e57');
     imageData.append('image', event.target.files[0]);
@@ -36,10 +37,8 @@ const AddProduct = () => {
     imageData)
     .then(function (response) {
       setIMageURL(response.data.data.display_url);
-      console.log(response.data.data.display_url)
     })
     .catch(function (error) {
-      console.log(error);
     });
 
   }
@@ -48,15 +47,15 @@ const AddProduct = () => {
       <h1>Add Product</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="">Product Name</label>
-      <input name="name" defaultValue="New exciting Event" ref={register} />
+      <input className="form-control" name="name"  ref={register} />
       <br/>
       <label htmlFor="">Add Price</label>
-      <input name="name" defaultValue="New exciting Event" ref={register} />
+      <input className="form-control" name="price"  ref={register} />
       <br/>
       <label htmlFor="">Add Photo</label>
-      <input name="exampleRequired" type="file" onChange={handleImageUpload} />
+      <input className="btn"  name="exampleRequired" type="file" onChange={handleImageUpload} />
       <br/>
-      <input type="submit" />
+      <input className="my-4 btn btn-primary" type="submit" />
     </form>
     </div>
   );

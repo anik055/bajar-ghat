@@ -7,6 +7,7 @@ import {
 import Manage from "./Manage";
 import AddProduct from "./Add";
 import Edit from "./Edit";
+import './admin.css'
 
 
 class Admin extends Component {
@@ -14,13 +15,14 @@ class Admin extends Component {
     return (
       <HashRouter>
         <div>
-          <h1>Simple SPA</h1>
-          <ul className="header">
-            <li><NavLink exact to="/">Manage Product</NavLink></li>
-            <li><NavLink to="/addProduct">Add Product</NavLink></li>
-            <li><NavLink to="/editProduct">Edit Product</NavLink></li>
+          <div className="head">
+          <ul className="d-flex justify-content-center header text-white">
+            <li className="btn btn-primary text-light m-2"><NavLink className="m-2 text-decoration-none text-light" exact to="/">Manage Product</NavLink></li>
+            <li className="btn btn-danger m-2 text-decoration-none"><NavLink className="text-decoration-none m-2 text-light" to="/addProduct">Add Product</NavLink></li>
+            <li className="btn btn-success m-2"><NavLink className="m-2 text-light text-decoration-none" to="/editProduct">Edit Product</NavLink></li>
           </ul>
-          <div className="content">
+          </div>
+          <div className="content d-flex justify-content-center">
             <Route exact path="/" component={Manage}/>
             <Route path="/addProduct" component={AddProduct}/>
             <Route path="/editProduct" component={Edit}/>

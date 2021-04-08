@@ -12,3 +12,12 @@ nav a {
 nav a:hover{
     background-color:gray
 }
+
+.headNav{
+    width: 70%;
+    margin:0px auto
+}
+
+.deco{
+    text-decoration: none;
+}

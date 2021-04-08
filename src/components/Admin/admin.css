@@ -78,3 +78,25 @@ body {
 #sidebar .nav a i{
   margin-right: 16px;
 }
+
+
+.header ul NavLink{
+  text-decoration: none;
+  color: #fff;
+  margin: 10px;
+
+}
+.header ul li{
+  float: left;
+  color: #fff;
+  margin: 10px;
+}
+.head{
+  margin: 10px auto;
+}
+
+tr td,th{
+  /* margin: 10px; */
+  padding: 10px 40px;
+  font-size:20px 
+}

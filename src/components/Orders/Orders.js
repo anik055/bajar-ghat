@@ -1,25 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import Event from '../Event/Event';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../App';
+import Event from '../Product/Product';
+import OrdersDetail from './OrdersDetail';
 
 
 const Orders = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     const [events, setEvents] = useState([]);
+    const email = loggedInUser.email;
+    let emaill = 'anikzaman67@gmail.com';
+
 
     useEffect(() => {
-        fetch('https://serene-island-10470.herokuapp.com/orders')
+        fetch(`https://rhubarb-sundae-92097.herokuapp.com/orders/${email}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
             setEvents(data)})
     }, [])
 
     return (
-        <div className="row">
-
+        <div >
+            <table>
+            <tr className="my-2 bg-warning">
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Order date</th>
+            </tr>
+            <hr/>
             {
-                events.map(event =><Event event={event}></Event>)
+                events.map(event =><OrdersDetail event={event}></OrdersDetail>)
             }
+            </table>
+
+            
         </div>
     );
 };

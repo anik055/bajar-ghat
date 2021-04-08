@@ -26,49 +26,6 @@ function Login() {
   const location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
 
-  
-  
-  
-
-  
-
-  
-
-  
-  // const handleBlur = (event) => {
-  //   let isFormValid = true;
-  //   if (event.target.name === "email") {
-  //     isFormValid = /\S+@\S+\.\S+/.test(event.target.value);
-  //   }
-  //   if (event.target.name === "password") {
-  //     const isPasswordValid = event.target.value.length > 6;
-  //     const passwordHasNumber = /\d{1}/.test(event.target.value);
-  //     isFormValid = isPasswordValid && passwordHasNumber;
-  //     // console.log(isPasswordValid);
-  //   }
-  //   if (isFormValid) {
-  //     const newUserInfo = { ...user };
-  //     newUserInfo[event.target.name] = event.target.value;
-  //     setUser(newUserInfo);
-  //   }
-  // };
-
-  // const handleSubmit = (event) => {
-  //   if (newUser && user.email && user.password) {
-  //     createUserWithEmailAndPassword(user.name, user.email, user.password)
-  //     .then(res => {
-  //       handleResponse(res, true);
-  //     })
-  //   }
-
-  //   if (!newUser && user.email && user.password) {
-  //     signInWithEmailAndPassword(user.email, user.password)
-  //     .then(res => {
-  //       handleResponse(res, true);
-  //     })
-  //   }
-  //   event.preventDefault();
-  // };
 
   const googleSignIn = () => {
       handleGoogleSignIn()

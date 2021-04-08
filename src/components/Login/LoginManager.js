@@ -27,28 +27,6 @@ export  const handleSignOut = () => {
       .catch((err) => {});
   };
 
-// export const handleFbSignIn = () => {
-//     const fbProvider = new firebase.auth.FacebookAuthProvider();
-//     return firebase
-//       .auth()
-//       .signInWithPopup(fbProvider)
-//       .then((result) => {
-//         /** @type {firebase.auth.OAuthCredential} */
-//         var credential = result.credential;
-//         var user = result.user;
-//         console.log("login success", user);
-//         var accessToken = credential.accessToken;
-//         return user;
-
-//       })
-//       .catch((error) => {
-//         var errorCode = error.code;
-//         var errorMessage = error.message;
-//         var email = error.email;
-//         var credential = error.credential;
-//         console.log(errorCode, errorMessage, email);
-//       });
-//   };
 
   export const handleGoogleSignIn = () => {
     const googleProvider = new firebase.auth.GoogleAuthProvider();
@@ -72,75 +50,6 @@ export  const handleSignOut = () => {
       });
   };
 
-// export  const handleGithubSignIn = () => {
-//     const githubProvider = new firebase.auth.GithubAuthProvider();
-//     return firebase
-//       .auth()
-//       .signInWithPopup(githubProvider)
-//       .then((result) => {
-//         /** @type {firebase.auth.OAuthCredential} */
-//         var credential = result.credential;
-//         var token = credential.accessToken;
-//         var user = result.user;
-//         user.success = true;
-//         return user;
-//         // ...
-//       })
-//       .catch((error) => {
-//         // Handle Errors here.
-//         var errorCode = error.code;
-//         var errorMessage = error.message;
-//         // The email of the user's account used.
-//         var email = error.email;
-//         // The firebase.auth.AuthCredential type that was used.
-//         var credential = error.credential;
-//         // ...
-//       });
-//   };
-
-
-
-  // export const createUserWithEmailAndPassword = (name, email, password) => {
-  //   return firebase
-  //   .auth()
-  //   .createUserWithEmailAndPassword(email, password)
-  //   .then((res) => {
-  //     const newUserInfo = res.user;
-  //     newUserInfo.error = "";
-  //     newUserInfo.success = true;
-      
-  //     console.log(newUserInfo);
-  //     updateUserName(name);
-  //     return newUserInfo;
-  //     // ...
-  //   })
-  //   .catch((error) => {
-  //     const newUserInfo = {};
-  //     newUserInfo.error = error.message;
-  //     newUserInfo.success = false;
-  //     return newUserInfo;
-  //   });
-  // }
-
-  // export const signInWithEmailAndPassword = (email, password) => {
-  //   return firebase
-  //   .auth()
-  //   .signInWithEmailAndPassword(email, password)
-  //   .then((res) => {
-  //     const newUserInfo = res.user;
-  //     newUserInfo.error = '';
-  //     newUserInfo.success = true;
-  //     return newUserInfo;
-  //   //   history.replace(from);
-
-  //   })
-  //   .catch((error) => {
-  //     const newUserInfo = {};
-  //     newUserInfo.error = error.message;
-  //     newUserInfo.success = false;
-  //     return newUserInfo;
-  //   });
-  // }
 
   const updateUserName = (name) => {
     const user = firebase.auth().currentUser;

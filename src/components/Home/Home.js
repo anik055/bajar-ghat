@@ -1,22 +1,35 @@
 import React, { useEffect, useState } from 'react';
-import Event from '../Event/Event';
-
+import Product from '../Product/Product'
+import './home.css'
+import CircularProgress from '@material-ui/core/CircularProgress'
 
 const Home = () => {
 
-    const [events, setEvents] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://serene-island-10470.herokuapp.com/events')
+        fetch('https://rhubarb-sundae-92097.herokuapp.com/products')
         .then(res => res.json())
-        .then(data => setEvents(data))
+        .then(data => setProducts(data))
     }, [])
 
     return (
-        <div className="row">
+
+        <div>
+            <div>
             {
-                events.map(event =><Event event={event}></Event>)
+                products.length === 0 && <div className=" spinn"><CircularProgress className=" spinn" /></div>
             }
+        </div>
+        <div className="product ">
+            
+            <div className="roww ">
+            {
+                products.map(product =><Product product={product}></Product>)
+            }
+
+        </div>
+        </div>
         </div>
     );
 };

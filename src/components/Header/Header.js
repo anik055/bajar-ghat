@@ -6,15 +6,16 @@ import './header.css'
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
-        <div className="header" >
-            <nav>
-                <Link to="/shop">Shop</Link>
-                <Link to="/review">Order review</Link>
-                <Link to="/inventory">Manage Inventory</Link>
-                <Link to="/admin">Admin</Link>
-                <Link to="/orders">Orders</Link>
-                <button onClick={()=>setLoggedInUser({})}>sign out</button>
-            </nav>
+        <div className="header bg-dark text-primary" >
+            <div class="headNav d-flex bd-highlight bg-dark">
+            <div class="p-2 deco flex-grow-1 bd-highlight"><Link className="text-white text-decoration-none" to="/shop">Bajar Shodai</Link></div>
+            <div class="p-2 bd-highlight"><Link className="text-white text-decoration-none" to="/home">Home</Link></div>
+            <div class="p-2 bd-highlight"><Link className="text-white text-decoration-none" to="/orders">Orders</Link></div>
+            
+            <div class="p-2 bd-highlight"><Link className="text-white text-decoration-none" to="/admin">Admin</Link></div>
+            <div class="p-2 bd-highlight"><Link className="text-white text-decoration-none" to="/login">Login </Link></div>
+            <div class="p-2 bd-highlight"><button onClick={()=>setLoggedInUser({})}>sign out</button></div>
+            </div>
         </div>
     );
 };
