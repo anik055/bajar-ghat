@@ -14,7 +14,7 @@ open [Bajar Shodai](https://fresh-valley-66193.web.app/) in browser.
 5.  Material UI
 6.  FontAwesome
 7.  Stripe Payment
-8.  Firebase Authentication
+8.  Firebase Auth
 9.  Express.js (For Server side)
 10. MongoDB (For database)
 
