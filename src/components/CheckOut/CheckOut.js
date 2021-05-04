@@ -27,7 +27,7 @@ const CheckOut = (props) => {
     })
     .then(res => res.json())
     .then(data => console.log(data) )
-    alert('product added successfully');
+    alert('order placed successfully');
   };
 
     useEffect(() => {
@@ -39,25 +39,31 @@ const CheckOut = (props) => {
 
     return (
         <div className="content">
-            <table className="d-flex justify-content-center header text-white">
+            <table className="justify-content-center header text-dark">
+            <thead>
             <tr>
                 <th>Product name</th>
                 <th>Quantity</th>
                 <th>Price</th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>{product.name}</td>
                 <td>1</td>
-                <td>{product.price}</td>
+                <td>${product.price}</td>
             </tr>
+            </tbody>
             </table>
             <hr/>
             <table>
+            <thead>
             <tr>
                 <td>Total</td>
                 <td></td>
-                <td>{product.price}</td>
+                <td>${product.price}</td>
             </tr>
+            </thead>
             </table>
             <button className="btn btn-primary"onClick={addToOrder}>Check Out</button>
         </div>

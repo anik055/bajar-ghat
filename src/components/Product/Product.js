@@ -46,7 +46,7 @@ const Product = ({product}) => {
         <div className="column ">
           <div className=" card d-flex justify-content-center">
             <img style={{height: '250px'}} src={imageURL} alt=""/>
-            <h3 >{name}</h3><span className="text-primary">$ {price}</span> <Link to = "/checkOut"> <button onClick={ onSubmit} class="btn btn-primary">Buy Now</button></Link>
+            <h3 >{name}</h3><span className="text-primary">$ {price}</span> <Link to = "/checkOut"> <button onClick={ onSubmit} className="btn btn-primary">Buy Now</button></Link>
         </div>
         </div>
     );

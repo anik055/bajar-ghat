@@ -18,12 +18,14 @@ const ManageItem = (product) => {
               })
       }
     return (
-        <tr>
+       <tbody>
+          <tr>
             <td>{name}</td>
             <td>{price}</td>
             <td>1</td>
             <td><button onClick={(event)=>deleteProduct(event,_id)}>Delete</button></td>
         </tr>
+       </tbody>
     );
 };
 

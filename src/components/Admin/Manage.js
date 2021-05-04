@@ -15,14 +15,18 @@ const Manage = () => {
 
     return (
         <div className="ro">
-<table>
+        <table>
+            <thead>
             <tr>
                 <th>Name</th>
                 <th>Quantity</th>
                 <th>Price</th>
                 <th>Action</th>
             </tr>
+            </thead>
+            </table>
             <hr/>
+            <table>
 
             {
                 products.map(product =><ManageItem product={product}></ManageItem>)

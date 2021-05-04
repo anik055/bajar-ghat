@@ -7,7 +7,7 @@ we have used firebase to deploy amr web app.
 
 ## material used to develop
 
-we have used HTML, CSS, bootstrap, fontawesome, javascript, react, react router, conditional rendering, material ui and so on. 
+we have used HTML, CSS, bootstrap, fontawesome, javascript, react, react router, conditional rendering, material ui, Heroku and so on. 
 
 ## server-site
 we have used Heroku to deploy our server site. in addition we have used mongoDB as our database.
