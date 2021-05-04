@@ -1,16 +1,37 @@
 # Bajar Shodai web app
- in this web app we have developed an ecommerce site with some functionality.we can login using firebase authentication, add products, manage products, delete products, order products and so on
 
-we have used firebase to deploy amr web app.
- open [Bajar Shodai](https://fresh-valley-66193.web.app/) in browser.
- [Github repo](https://github.com/Porgramming-Hero-web-course/full-stack-client-anik055)
+An ecommerce website to buy any product you want.
 
-## material used to develop
+open [Bajar Shodai](https://fresh-valley-66193.web.app/) in browser.
+ 
 
-we have used HTML, CSS, bootstrap, fontawesome, javascript, react, react router, conditional rendering, material ui, Heroku and so on. 
+## Developed with:
+
+1.  React
+2.  React-router
+3.  Bootstrap
+4.  React-hook-form
+5.  Material UI
+6.  FontAwesome
+7.  Stripe Payment
+8.  Firebase Authentication
+9.  Express.js (For Server side)
+10. MongoDB (For database)
+
+## Features:
+
+1. customer can order products.
+2. customer can pay using payment gateway.
+3. customer can see their own order details any time.
+4. fully responsive website.
+5. one can login with google account.
+6. admin can add product and product details.
+7. admin can manage any product.
+
+
 
 ## server-site
-we have used Heroku to deploy our server site. in addition we have used mongoDB as our database.
+we have used Heroku to deploy our server site.
 server site link [bajar Shodai](https://rhubarb-sundae-92097.herokuapp.com/)
-server site code repo: [Github repo] (https://github.com/Porgramming-Hero-web-course/full-stack-server-anik055)
+server site code repo: [Github repo] (https://github.com/anik055/bajar-shodai-server)
 
